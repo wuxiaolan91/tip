@@ -1,0 +1,58 @@
+/* 提示框模块 start */
+#globalTip {
+  z-index: 2000;
+  display: none;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50%;
+  top: 150px;
+  width: 20.83333333em;
+  /*height: 4.16666667em;*/
+  /*padding-top: 1em;*/
+  background-color: rgba(0,0,0,.7);
+
+  /*border: 1px solid #ddd;*/
+  text-align: center;
+  /* */
+  /*padding: 10px 20px;*/
+  color: #fff;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+
+line-height: 2;
+}
+#globalTip p {
+  display: inline-block;
+}
+ @-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+} 
+#codeTip{
+	display: none;
+	height: 40px;
+}
+#globalTip .waitIcon {
+	display: none;
+  width: 2.95rem;
+  height: 2.95rem;
+  margin: 2rem auto 0;
+  background: url(img/loading.gif);
+    /*background: url(img/waitTip.png);
+     background-size: 550/24em 400/24em; */
+    background-size: contain;
+    /*-webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+     -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform-origin:inherit!important; 
+    transform-origin:inherit!important; */
+  vertical-align: middle;
+}

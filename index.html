@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tip demo</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/tip.css">
+</head>
+<body>
+	<div id="globalTip">
+		<div>
+			<i class="waitIcon"></i><p></p>
+		</div>
+		
+	</div>
+	<p>	test tip</p>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/tip.js" ></script>
+	<script>
+		
+		
+		(function(){
+			var tipDemo = null;
+			var tipTest = {
+				init:function(){
+					
+					this.demo4();
+					
+				},
+				demo1:function(){
+					tipDemo = new Tip();
+					tipDemo.show();
+				},
+				/**
+				 * [demo2 description]
+				 * @return {[type]} [description]
+				 */
+				demo2:function(param1,para2){
+					tipDemo = new Tip();
+					tipDemo.show("demo2");
+				},
+				/**
+				 * 提示显示后不主动消失，可之后再通过调用对象的.hide()方法让元素消失
+				 */
+				demo3:function(){
+					
+					tipDemo = new Tip({
+						content:"请求发送中-demo3",
+						hide:false
+					})
+					tipDemo.show();
+				},
+				/**
+				 * [demo4 description]
+				 * 传一个回调函数
+				 */
+				demo4:function(){
+					tipDemo = new Tip();
+					tipDemo.show({
+						content:"demo4",
+						callBack:function(){
+							alert("消失巴啦啦");
+						}
+					});
+				},/**
+				 * [demo5 description]
+				 */
+				demo5:function(){
+					tipDemo = new Tip();
+					tipDemo.show("提示中-demo5");
+
+				}
+			}
+			tipTest.init();
+		})();
+	</script>
+</body>
+</html>
